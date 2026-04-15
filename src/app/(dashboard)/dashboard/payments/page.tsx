@@ -60,7 +60,7 @@ const PaymentListContent = () => {
   console.log(data);
   
 
-  const payments: Payment[] = data?.paymentsList || [];
+  const payments: any[] = data?.paymentsList || [];
   const totalPages = data?.meta?.totalPages || 1;
 
   const getStatusBadge = (status: PaymentStatus) => {
