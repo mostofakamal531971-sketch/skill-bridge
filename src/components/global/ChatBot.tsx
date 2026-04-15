@@ -195,11 +195,11 @@ const MessageBubble = ({
             <div className="prose prose-sm max-w-none text-current marker:text-current dark:prose-invert prose-p:leading-relaxed prose-pre:my-0">
               <ReactMarkdown
                 components={{
-                  code({ inline, className, children, ...props }) {
+                  code({ className, children, ...props }) {
                     const match = /language-(\w+)/.exec(className || '');
                     const codeString = String(children).replace(/\n$/, '');
 
-                    return !inline && match ? (
+                    return  match ? (
                       <div className="my-4 overflow-hidden rounded-2xl border border-slate-700/50 bg-[#0d1117] shadow-2xl">
                         <div className="flex items-center justify-between border-b border-white/10 bg-white/5 px-4 py-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">
                           <span>{match[1]}</span>
@@ -295,7 +295,7 @@ export default function ChatModal() {
   const {
     messages = [],
     sendMessage,
-    isLoading,
+    status,
     setMessages,
     error,
   } = useChat({
@@ -303,6 +303,8 @@ export default function ChatModal() {
     messages: initialMessages as any,
     onFinish: () => inputRef.current?.focus(),
   });
+  
+  const isLoading = status === "streaming"
 
   // Lock Body Scroll
   useEffect(() => {

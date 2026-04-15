@@ -114,7 +114,7 @@ const {data,isLoading,isError} = useQuery({
 
           <ProfileAvater data={
             {
-              user:data?.user.data,
+              user:data?.user.data as any,
               isLoading,
             isError}
           } />
