@@ -148,7 +148,6 @@ export default function SessionManager() {
       const params = new URLSearchParams({
         page: String(page),
         limit: String(limit),
-        ...(statusFilter !== "ALL" && { status: statusFilter }),
       });
       const response: ApiResponse = await getAllBookingsByAdmin(page,statusFilter);
       if (response.success) {
@@ -176,7 +175,7 @@ export default function SessionManager() {
   }, [fetchBookings]);
 
   const handleStatusChange = (value: string) => {
-    const newStatus = value as BookingStatus | "ALL";
+    const newStatus = value as BookingStatus | "COMPLETED";
     setStatusFilter(newStatus);
     setPage(1);
     updateURL({ status: value, page: 1 });
@@ -274,7 +273,7 @@ export default function SessionManager() {
             </SelectContent>
           </Select>
 
-          {statusFilter !== "ALL" && (
+          {statusFilter !== "COMPLETED" && (
             <Button
               variant="ghost"
               size="sm"
@@ -401,7 +400,7 @@ export default function SessionManager() {
                       </div>
                       <p className="text-sm font-medium text-foreground">No bookings found</p>
                       <p className="text-xs text-muted-foreground mt-1">
-                        {statusFilter !== "ALL"
+                        {statusFilter !== "COMPLETED"
                           ? `No ${statusFilter.toLowerCase()} bookings available.`
                           : "There are no bookings in the system yet."}
                       </p>

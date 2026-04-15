@@ -9,7 +9,7 @@ console.log(userData?.user.data);
 
   return (
     <div>
-      <TutorProfilePage tutor={userData?.user.data}/>
+      <TutorProfilePage tutor={userData?.user.data as any}/>
     </div>
   )
 }

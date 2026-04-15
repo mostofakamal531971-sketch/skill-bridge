@@ -96,7 +96,7 @@ export function DashboardLayout({ children, title, subtitle}: DashboardLayoutPro
     setOpenSubmenu(openSubmenu === label ? null : label);
   };
 
-  const role = user?.role || user?.user?.role || "STUDENT";
+  const role = user?.role || user?.role || "STUDENT";
   const activeNavItems = navItems[role as keyof typeof navItems] || navItems.STUDENT;
 
   const isOnboarded = user?.bio === "" && user.experience === "" && user.hourlyRate  === "";
@@ -220,7 +220,7 @@ console.log(isOnboarded);
               <Bell className="w-4.5 h-4.5" />
               <span className="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-destructive border-2 border-background" />
             </button>
-            <ProfilePopup userName={user?.name} userRole={user?.name} avatarInitials={initials} />
+            <ProfilePopup userName={user?.name!} userRole={user?.name} avatarInitials={initials!} />
           </div>
         </header>
 

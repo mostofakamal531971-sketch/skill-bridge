@@ -5,8 +5,7 @@ export default function ModeratorDashboardLayout({ children }: { children: React
     <DashboardLayout
       title="Moderator Dashboard"
       subtitle="Platform moderation & support"
-      userName="Moderator"
-      userRole="MODERATOR"
+   
     >
       {children}
     </DashboardLayout>

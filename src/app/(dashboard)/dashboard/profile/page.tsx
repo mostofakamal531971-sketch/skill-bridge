@@ -7,7 +7,7 @@ export default async function StudentProfilePage() {
 const userData = await getProfile();
 console.log(userData);
 
-  return <StudentProfileFrom userData={userData?.user.data}/>
+  return <StudentProfileFrom userData={userData?.user.data as any}/>
 }
 
 // --- Skeleton Loader ---

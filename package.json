@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/react": "^3.0.163",
     "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-alert-dialog": "^1.1.15",
@@ -40,6 +41,7 @@
     "@tanstack/react-query": "^5.90.20",
     "@tanstack/zod-form-adapter": "^0.42.1",
     "@zegocloud/zego-uikit-prebuilt": "^2.17.2",
+    "ai": "^6.0.161",
     "axios": "^1.13.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -61,6 +63,7 @@
     "react-markdown": "^10.1.0",
     "react-observable": "^1.1.3",
     "react-resizable-panels": "^4.5.3",
+    "react-syntax-highlighter": "^16.1.1",
     "recharts": "^2.15.4",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.4.0",
@@ -76,6 +79,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",

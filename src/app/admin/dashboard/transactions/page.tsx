@@ -119,16 +119,16 @@ const PaymentListContent = () => {
                 <TableSkeleton />
               ) : payments.length > 0 ? (
                 payments.map((payment) => (
-                  <tr key={payment.paymentId} className="hover:bg-muted/30 transition-colors group">
+                  <tr key={payment.id} className="hover:bg-muted/30 transition-colors group">
                     <td className="p-4"><input type="checkbox" className="rounded border-border" /></td>
-                    <td className="p-4 font-medium">{payment.transactionId || `#S-${payment.paymentId.slice(0, 6)}`}</td>
+                    <td className="p-4 font-medium">{payment.transactionId || `#S-${payment.id.slice(0, 6)}`}</td>
                     <td className="p-4 text-muted-foreground">
                       {new Date(payment.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}
                     </td>
                     <td className="p-4">{payment.user?.name || "Cody Fisher"}</td>
                     <td className="p-4 text-muted-foreground">{payment.paymentMethod || "Card"}</td>
                     <td className="p-4 font-medium text-foreground">${payment.amount.toFixed(2)}</td>
-                    <td className="p-4">{getStatusBadge(payment.paymentStatus)}</td>
+                    <td className="p-4">{getStatusBadge(payment.status)}</td>
                     
                   </tr>
                 ))

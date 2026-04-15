@@ -14,7 +14,7 @@ const TutorDashbaordLayout = async({children}:{
   return (
     <main className='w-full '>
       
- <DashboardLayout title="Admin Dashboard" subtitle="Platform overview and management" userName="Admin User" userRole='ADMIN'>
+ <DashboardLayout title="Admin Dashboard" subtitle="Platform overview and management">
     {children}
     </DashboardLayout>
     </main>
