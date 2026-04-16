@@ -18,7 +18,7 @@ import { useUser } from '@/context/UserContext'
 import { LoginFormData } from '@/validations-schemas/auth/auth.schema'
 import AppLoader from '@/components/global/AppLoader'
 
-const DemoLoginButton = ({login,isLoading}) => {
+const DemoLoginButton = ({login,isLoading}:{login:any,isLoading:boolean}) => {
 
 
     const demoLogin = {

@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Camera, Loader2, Mail, Save, X, MapPin, Phone, Briefcase } from "lucide-react";
+import { Camera, Loader2, Mail, Save, X, MapPin, Phone, Briefcase, Sparkles } from "lucide-react";
 import { useMemo, useRef, useState } from "react";
 
 import { Badge } from "@/components/ui/badge";

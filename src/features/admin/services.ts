@@ -5,7 +5,7 @@ import { getToken } from "../student-dashboard/services";
 
 const API_URL = process.env.API_URL;
 
-export const getAllUsersByAdmin = async (page,status,q) => {
+export const getAllUsersByAdmin = async (page:number,status:string,q:string) => {
   try {
     const cookieString = await getToken(); // Returns cookieStore.toString()
     if (!cookieString) throw new Error("Unauthorized: No cookies found");
@@ -77,7 +77,7 @@ export const updateUserStatus = async (payload: { userId: string; body: { status
   }
 };
 
-export const getAllBookingsByAdmin = async (page,status) => {
+export const getAllBookingsByAdmin = async (page:number,status:any) => {
   try {
     const cookieString = await getToken();
     if (!cookieString) throw new Error("Unauthorized: No cookies found");

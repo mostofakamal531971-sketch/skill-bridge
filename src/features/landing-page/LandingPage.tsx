@@ -5,8 +5,7 @@ import { CategoriesSkeleton, HeroSkeleton, StatsSkeleton, TutorSkeleton } from "
 import { StudentStatsSkelection } from "../student-dashboard/components/StudentStats";
 import FeaturedTutors from "./FeaturedTutors";
 import CTASection from "./CTASection";
-import Footer from "@/components/layout/Footer";
-
+import { Footer } from "@/components/layout/Footer";
 
 
 const LandingPage = () => {

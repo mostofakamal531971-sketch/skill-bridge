@@ -28,7 +28,7 @@ export async function getSavedTutors() {
     return { error: error.message }
   } 
 }
-export async function unSaveTutor(tutorId) {
+export async function unSaveTutor(tutorId:string) {
   try {
     const token = await getToken();
     const res = await httpRequest.post(`/api/student/un-savedTutor/${tutorId}`,{
